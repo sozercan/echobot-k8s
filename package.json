@@ -1,0 +1,22 @@
+{
+  "name": "echobot",
+  "version": "1.0.0",
+  "description": "A sample bot for getting started with Bot Framework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sozercan/echobot-k8s"
+  },
+  "keywords": [
+    "botframework"
+  ],
+  "homepage": "https://github.com/sozercan/echobot-k8s",
+  "dependencies": {
+    "botbuilder": "^3.5.4",
+    "restify": "^4.3.0",
+    "auto-sni": "^1.5.1"
+  }
+}

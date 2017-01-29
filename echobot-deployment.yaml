@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: echobot
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: echobot
+    spec:
+      containers:
+      - name: echobot
+        image: <your-container-image>
+        ports:
+        - containerPort: 3977
+        - containerPort: 3978
+        env:
+        - name: MICROSOFT_APP_ID
+          valueFrom:
+            secretKeyRef:
+              name: echobot-secrets
+              key: appid
+        - name: MICROSOFT_APP_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: echobot-secrets
+              key: apppassword
